@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ozil</title>
+</head>
+<body>
+<div th:replace="@{/frag}"></div>
+<article>
+    <body th:layout>
+
+    </body>
+    <table>
+        <thead>
+        <tr>Id</tr>
+        <tr>Name</tr>
+        </thead>
+        <tbody>
+        <tr th:each="project : ${projects}">
+            <td th:text="#{project.Id}">Id</td>
+            <td th:text="#{project.name}">Name</td>
+        </tbody>
+    </table>
+</article>
+</body>
+</html>
