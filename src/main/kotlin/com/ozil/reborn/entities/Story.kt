@@ -14,4 +14,7 @@ open class Story : GUIDEntity() {
     open var description: String? = ""
 
 
+    @ManyToOne
+    @JoinColumn(name = "project_id")
+    open var project: Project? = null
 }

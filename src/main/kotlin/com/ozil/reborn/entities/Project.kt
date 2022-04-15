@@ -11,9 +11,12 @@ open class Project  : GUIDEntity(){
     open var name: String? = null
 
 
-    @Column(name = "description", nullable = false)
+    @Column(name = "description", nullable = true, length = 1000)
     open var description: String? = ""
 
 
+
+    @OneToMany(mappedBy = "project", cascade = [CascadeType.ALL])
+    open var stories : MutableList<Story> = ArrayList()
 
 }
