@@ -1,10 +1,14 @@
 package com.ozil.reborn.entities
 
+import lombok.Getter
+import lombok.Setter
 import java.util.*
 import javax.persistence.*
 
 @Entity
 @Table(name = "project")
+@Getter
+@Setter
 open class Project  : GUIDEntity(){
 
     @Column(name = "name", nullable = false)

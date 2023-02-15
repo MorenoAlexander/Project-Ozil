@@ -5,17 +5,17 @@ import javax.persistence.Entity
 import javax.persistence.Table
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 open class User : BasicEntity() {
 
     @Column(name = "username", nullable = false, unique = true)
-    var username: String? = null
+    open var username: String? = null
 
     @Column(name = "password", nullable = false, )
     private var password: String? = null
 
     @Column(name = "email", nullable = false, unique = true)
-    var email: String? = null
+    open var email: String? = null
 
 
 

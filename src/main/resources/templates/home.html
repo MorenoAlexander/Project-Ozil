@@ -1,6 +1,6 @@
 <!doctype html>
 <html xmlns:th="https://www.thymeleaf.org" lang="en">
-<head>
+<head th:replace="fragments/head::head('Ozil Projects')">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
@@ -10,17 +10,20 @@
 </head>
 <body>
 
-<table>
+
+<table class="table">
     <thead>
-    <tr>Id</tr>
-    <tr>Name</tr>
+        <tr>Id</tr>
+        <tr>Name</tr>
     </thead>
     <tbody class="card">
     <tr th:each="project : ${projects}">
-        <td th:text="${project.id}">Id</td>
-        <td th:text="${project.name}">Name</td>
+        <td th:text="${project.getId()}">Id</td>
+        <td th:text="${project.getName()}">Name</td>
     </tbody>
 </table>
+
+<button class="button">Click me!</button>
 
 
 </body>

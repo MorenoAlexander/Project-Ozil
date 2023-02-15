@@ -8,7 +8,7 @@ import java.util.*
 @org.springframework.stereotype.Repository
 interface ProjectRepository : JpaRepository<Project, UUID> {
 
-
+    fun getProjectByName(name: String): Optional<Project>
     fun findAllByOrderByCreatedAtDesc(): ArrayList<Project>
 
     fun findByName(name: String): Optional<Project>
@@ -16,5 +16,7 @@ interface ProjectRepository : JpaRepository<Project, UUID> {
     fun countDistinctById(id: UUID): Long
 
     fun findByOrderByNameAsc(sort: Sort): ArrayList<Project>
+
+
 
 }

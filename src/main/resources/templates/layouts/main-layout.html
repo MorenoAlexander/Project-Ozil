@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org" th:fragment="main-fragment (title, otherStaticResources, header, nav, mainContent, footer)">
-<head>
-    <meta charset="UTF-8">
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:fragment="main-fragment (title, otherStaticResources, header, nav, mainContent, footer)"
+      xmlns:layout="http://www.w3.org/1999/xhtml">
+
+<div th:replace="fragments::head()" th:attr="title">
     <title th:replace="${title}">Ozil Page Title</title>
-    <link rel="stylesheet" type="text/css" th:ref="@{/main.css}" href="../../static/main.css"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:src="@{../static/global.css}"/>
+</div>
+<head>
     <th:block th:replace="${otherStaticResources} ?: ~{}"></th:block>
 </head>
 
@@ -12,9 +17,12 @@
     <h2>Ozil Header</h2>
 </header>
 <section>
-    <nav th:insert="${header} ?: ~{}">
-
+    <nav th:insert="${mainContent} ?: ~{}">
     </nav>
 </section>
+
+<footer th:insert="${footer}">
+
+</footer>
 </body>
 </html>
