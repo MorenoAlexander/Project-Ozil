@@ -13,13 +13,16 @@
 
 <table class="table">
     <thead>
-        <tr>Id</tr>
-        <tr>Name</tr>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
     </thead>
-    <tbody class="card">
+    <tbody>
     <tr th:each="project : ${projects}">
         <td th:text="${project.getId()}">Id</td>
         <td th:text="${project.getName()}">Name</td>
+    </tr>
     </tbody>
 </table>
 
