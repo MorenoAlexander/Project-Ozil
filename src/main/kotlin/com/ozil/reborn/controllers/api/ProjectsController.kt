@@ -1,4 +1,4 @@
-package com.ozil.reborn.controllers.API
+package com.ozil.reborn.controllers.api
 
 import com.ozil.reborn.entities.Project
 import com.ozil.reborn.repositories.ProjectRepository

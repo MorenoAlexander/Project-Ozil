@@ -1,4 +1,4 @@
-package com.ozil.reborn.controllers.View
+package com.ozil.reborn.controllers.view
 
 import com.ozil.reborn.repositories.ProjectRepository
 import org.springframework.stereotype.Controller

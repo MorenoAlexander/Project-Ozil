@@ -1,7 +1,6 @@
-package com.ozil.reborn.controllers.View
+package com.ozil.reborn.controllers.view
 
 import com.ozil.reborn.repositories.ProjectRepository
-import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.*
