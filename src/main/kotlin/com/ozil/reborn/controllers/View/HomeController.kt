@@ -1,6 +1,7 @@
-package com.ozil.reborn.controllers
+package com.ozil.reborn.controllers.View
 
 import com.ozil.reborn.repositories.ProjectRepository
+import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.*
@@ -15,5 +16,12 @@ class HomeController(val repository: ProjectRepository) {
 
         model.addAttribute("projects", data);
         return "home"
+    }
+
+    @RequestMapping(value= [""], method = [RequestMethod.PUT])
+    // disable authentication for this endpoint
+    fun put(model : Model): String {
+
+        return "viewtemp/put"
     }
 }
