@@ -1,4 +1,4 @@
-package com.ozil.reborn.controllers
+package com.ozil.reborn.controllers.API
 
 import com.ozil.reborn.entities.Issue
 import com.ozil.reborn.repositories.IssueRepository
@@ -7,7 +7,7 @@ import java.util.*
 
 @RestController
 @CrossOrigin(origins = ["*"])
-class IssuesAPIController(val issuesRepository: IssueRepository) {
+class IssuesController(val issuesRepository: IssueRepository) {
 
     @GetMapping("/api/issues")
     fun getIssues(): List<Issue> = issuesRepository.findAll();

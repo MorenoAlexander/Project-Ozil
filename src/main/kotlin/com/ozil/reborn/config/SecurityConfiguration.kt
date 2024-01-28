@@ -33,13 +33,17 @@ class SecurityConfiguration  : WebSecurityConfigurerAdapter() {
     }
 
     override fun configure(http: HttpSecurity?) {
-        http?.authorizeRequests()?.antMatchers("/**")?.permitAll()
-            ?.anyRequest()?.authenticated()
+        // all requests
+        http?.authorizeRequests()
+            ?.anyRequest()
+            ?.authenticated()
             ?.and()
             ?.httpBasic()
-            ?.authenticationEntryPoint(authenticationEntryPoint);
+            ?.authenticationEntryPoint(authenticationEntryPoint)
+            ?.and()
+            ?.csrf()
+            ?.disable()
 
-        // http?.addFilterAfter(CustomFilter(), BasicAuthenticationFilter.class)
     }
 
     @Bean

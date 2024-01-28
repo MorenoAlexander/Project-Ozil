@@ -1,6 +1,5 @@
-package com.ozil.reborn.controllers
+package com.ozil.reborn.controllers.API
 
-import com.ozil.reborn.controllers.ProjectsAPIController.Companion.routeRoot
 import com.ozil.reborn.entities.Project
 import com.ozil.reborn.repositories.ProjectRepository
 import org.springframework.web.bind.annotation.CrossOrigin
