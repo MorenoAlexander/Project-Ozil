@@ -25,7 +25,7 @@ fun HTML.todoListPage(todoList: TodoList) {
             }
 
             div {
-                attributes["hx-get"] = "/api/todo-items"
+                attributes["hx-get"] = "/api/todo-items/${todoList.id}"
                 attributes["hx-trigger"] = "load"
                 id = "todo-items"
                 style = "margin-top: 20px; padding: 10px; border: 1px solid #ddd;"
