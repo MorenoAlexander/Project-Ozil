@@ -52,9 +52,7 @@ fun Application.configureRouting() {
             )
 
             try {
-                val todo = getTodoListById(id) ?: return@get call.respondText(
-                    "Todo list not found", status = HttpStatusCode.NotFound
-                )
+                val todo = getTodoListById(id)
 
                 call.respondHtml(HttpStatusCode.OK) {
                     todoListPage(todo)

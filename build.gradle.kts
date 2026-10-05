@@ -31,7 +31,7 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-jdbc:0.45.0")
     
     // Logging
-    implementation("ch.qos.logback:logback-classic:1.4.14")
+    implementation("ch.qos.logback:logback-classic:1.5.13")
     
     // Testing
     testImplementation("io.ktor:ktor-server-tests-jvm")

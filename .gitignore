@@ -24,3 +24,8 @@ out/
 
 # Logs
 *.log
+node_modules/
+dist/
+.aspire/
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
